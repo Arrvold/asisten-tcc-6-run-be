@@ -1,4 +1,5 @@
 GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTksIm5hbWUiOiJ0ZXMyIiwiZW1haWwiOiJ0ZXNAbG9sLmNvbSIsImdlbmRlciI6Ik1hbGUiLCJjcmVhdGVkQXQiOiIyMDI1LTA1LTA3VDA3OjU3OjQ2LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDI1LTA1LTA3VDA3OjU4OjAwLjAwMFoiLCJpYXQiOjE3NDY2MDQ4MTMsImV4cCI6MTc0NjYwNDg0M30.HT_5EKaIPL9Fx_lDzpYvViEqklpI-xNTw5GIvGbmdlQ
 
 ###
 
@@ -6,22 +7,32 @@ POST http://localhost:5000/add-user
 Content-Type: application/json
 
 {
-    "name": "tes",
-    "email": "tes@tes.com",
-    "gender": "Male"
+"name": "tes", "email": "tes@lol.com", "gender": "Male", "password": "12345"
 }
 
-### 
+###
 
-PUT http://localhost:5000/edit-user/14
+PUT http://localhost:5000/edit-user/14 
 Content-Type: application/json
 
 {
-    "name": "tessss",
-    "email": "tesss@tessss.com",
-    "gender": "Male"
+"name": "tessss", "email": "tesss@tessss.com", "gender": "Male"
 }
 
 ###
 
 DELETE http://localhost:5000/delete-user/17
+
+###
+
+POST http://localhost:5000/login 
+Content-Type: application/json
+
+{
+
+"email": "tes@lol.com", "password": "12345"
+}
+
+###
+
+DELETE http://localhost:5000/logout
